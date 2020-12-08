@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6c74545ce9.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Quizyu</title>
 </head>
 
 <body id="body">
@@ -142,18 +142,27 @@
         width: fit-content;
         height: fit-content;
         padding: 10px;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .button:disabled {
+        background-color: black;
+        opacity: .3;
     }
 
     .button {
         background-color: orange;
         width: fit-content;
         height: fit-content;
+        color: white;
         padding: 10px;
         border: none;
         outline: none;
-        border-radius: 4px;
+        border-radius: 6px;
         background-color: #157A6E;
         transition: .5s;
+        cursor: pointer;
     }
 
     #option button {
