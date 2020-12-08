@@ -51,7 +51,7 @@
         ask.classList.add('fa-pulse')
         ask.classList.add('fa-spinner')
         let ajax = new XMLHttpRequest()
-        ajax.open('GET', 'https://opentdb.com/api.php?amount=1&category=14&difficulty=easy', true)
+        ajax.open('GET', 'https://opentdb.com/api.php?amount=1&category=9&difficulty=easy', true)
         ajax.send()
         ajax.onreadystatechange = function (res) {
             res = JSON.parse(this.responseText).results[0]
