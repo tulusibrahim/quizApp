@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Quiz with your friends!</h1>
+    <button id="createroom">Create Room</button>
+    <button>Join A Room</button>
+    <p>Created Room :</p>
+    <div id="listroom"></div>
+</body>
+<style>
+
+</style>
+<script>
+    let socket = io()
+    let btncrtroom = document.getElementById('createroom')
+    let listroom = document.getElementById('listroom')
+
+    btncrtroom.addEventListener('click', function () {
+        let roomname = prompt('Input room name')
+        socket.emit('newroom', roomname)
+    })
+
+    socket.on('newroom', function (res) {
+        let a = document.createElement('a')
+        a.href = res
+        a.innerText = res
+        listroom.append(a)
+    })
+</script>
+<style>
+
+</style>
+
+</html>
