@@ -12,7 +12,7 @@
 
 <body id="body">
     <div id="wrapall">
-        <h1 style="text-align: center;">Quiz heula atuh</h1>
+        <h1 style="text-align: center;">Feeling smart enough?</h1>
         <div id="content">
             <h2 id="ask" class="fas fa-spinner" style="text-align: center;"></h2>
             <div id="option">
@@ -51,7 +51,7 @@
         ask.classList.add('fa-pulse')
         ask.classList.add('fa-spinner')
         let ajax = new XMLHttpRequest()
-        ajax.open('GET', 'https://opentdb.com/api.php?amount=1&category=9&difficulty=easy', true)
+        ajax.open('GET', 'https://opentdb.com/api.php?amount=1&category=9&type=boolean', true)
         ajax.send()
         ajax.onreadystatechange = function (res) {
             res = JSON.parse(this.responseText).results[0]
